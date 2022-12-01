@@ -1,0 +1,265 @@
+/* ========= General settings ========== */
+:root {
+  --light-gray: #f1f1f1;
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #e9b704;
+  --text-color: #606060;
+  --dark: #070707;
+  --blue-color: #189ad3;
+  --blue-hover: #71c7ec;
+  --blue-active: #107dac;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 34px;
+  text-align: center;
+}
+
+/* img { 
+    width: 100%;
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--black);
+}
+.container {
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* navbar start ==================== */
+.header {
+  padding-top: 40px;
+  background-color: var(--light-gray);
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo__name {
+  position: relative;
+  font-weight: 700;
+  font-size: 24px;
+}
+.logo__dots {
+  content: "";
+  position: absolute;
+  left: 124px;
+  bottom: 5px;
+  background-color: var(--yellow);
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar li + li {
+  margin-left: 30px;
+}
+.nav__links a {
+  color: var(--text-color);
+  font-weight: 500;
+}
+.nav__links {
+  position: relative;
+}
+.nav__link.active {
+  width: 100%;
+  border-bottom: 5px solid var(--blue-color);
+}
+.nav__links:hover::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s ease;
+}
+/* navbar end ================== */
+
+/* home start ================== */
+.home {
+  background-color: var(--light-gray);
+}
+.home__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 66px;
+}
+.home__text {
+  max-width: 450px;
+  margin-top: 20px;
+}
+.btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-color: #189ad3;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 22px;
+}
+.btn:hover {
+  background-color: #71c7ec;
+  color: var(--white);
+  transition: 0.5s ease;
+}
+.btn:active {
+  background-color: #005073;
+}
+.home__imege {
+  position: relative;
+  bottom: -15px;
+  right: 0;
+  width: 100%;
+}
+/* home end ================= */
+
+/* skills start =============== */
+.skills {
+  margin: 90px 0;
+}
+.skills__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 40px;
+  align-items: center;
+}
+.skilss__item {
+  max-width: 350px;
+  height: 180px;
+}
+.skills-icon {
+  width: 68px;
+  height: 68px;
+}
+/* skills end */
+
+/* portfolio start */
+.portfolio {
+  margin-bottom: 90px;
+}
+.portfolio__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.portfolio__img {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.5s ease;
+  border: 2px solid var(--blue-color);
+}
+.portfolio__img:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease;
+}
+/* portfolio end */
+
+/* footer start */
+.footer {
+  background-color: #333333;
+}
+.footer__content {
+  display: block;
+  text-align: center;
+}
+.footer__title {
+  color: var(--white);
+  padding-top: 30px;
+}
+.footer__text {
+  margin-top: 40px;
+  font-weight: 500;
+  color: var(--white);
+}
+.btn__center {
+  margin: 20px auto;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+.copy__right {
+  color: var(--white);
+  background-color: #222f5b;
+}
+.footer__copy-text {
+  padding: 30px 0;
+  text-align: center;
+}
+/* footer end */
+
+@media (max-width: 920px) {
+  .home__title {
+    font-size: 32px;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .home__content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo__name {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .logo__dots {
+    left: 165px;
+    bottom: -1px;
+  }
+}
+@media (max-width: 420px) {
+  .home__title {
+    line-height: 1.5;
+  }
+}
